@@ -1,5 +1,6 @@
 import java.util.Date;
 
 public interface Book {
-    void getBookDescription
+    String getBookLocation(String Description);
+    void displayInfo();
 }
