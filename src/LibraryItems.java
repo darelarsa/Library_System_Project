@@ -1,12 +1,16 @@
 class LibraryItems {
-    private String title;
-    private String author;
+    protected String title;
+    protected String author;
+    protected String publisher;
+    protected int publishDate;
     private int itemId;
     private boolean isAvailable;
 
-    public LibraryItems(String title, String author, int itemId) {
+    public LibraryItems(String title, String author, String publisher, int publishDate, int itemId) {
         this.title = title;
         this.author = author;
+        this.publisher = publisher;
+        this.publishDate = publishDate;
         this.itemId = itemId;
         this.isAvailable = true;
     }
@@ -23,10 +27,6 @@ class LibraryItems {
     public void returnItem() {
         isAvailable = true;
         System.out.println(title + " has been returned.");
-    }
-
-    public void displayInfo() {
-        System.out.println("ID: " + itemId + ", Title: " + title + ", Author: " + author + ", Available: " + isAvailable);
     }
 
 } 
