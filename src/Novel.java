@@ -1,7 +1,7 @@
 class Novel extends LibraryItems implements Book{
-    private int totalPages;
+    private String totalPages;
 
-    public Novel(String title, String author, String publisher, int publishDate, int itemId, int totalPages) {
+    public Novel(String title, String author, String publisher, String publishDate, String itemId, String totalPages) {
         super(title, author, publisher, publishDate, itemId);
         this.totalPages = totalPages;
     }

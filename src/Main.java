@@ -7,16 +7,16 @@ public class Main {
         ArrayList<LibraryItems> bookshelf = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        int itemid = 1;
+        String itemid = "123";
 
-        while (true){
+        while (true) {
             System.out.println("\nWhat kind of books do you want to store? 1. Novel 2. Magazine 3. exit");
             int choice = scanner.nextInt();
             scanner.nextLine();
-            if(choice == 3){
+            if (choice == 3) {
                 break;
             }
-            if(choice == 1){ //wants to store a novel
+            if (choice == 1) { //wants to store a novel
                 System.out.println("what is the title of the book?: ");
                 String bookTitle = scanner.nextLine();
                 System.out.println("what is the name of the author: ");
@@ -24,16 +24,16 @@ public class Main {
                 System.out.println("what is the name of the publisher: ");
                 String publisherName = scanner.nextLine();
                 System.out.println("what is the published date of the book: ");
-                int publishedDate = scanner.nextInt();
+                String publishedDate = scanner.nextLine();
                 scanner.nextLine();
                 System.out.println("How many pages does the book have: ");
-                int pageNumber = scanner.nextInt();
+                String pageNumber = scanner.nextLine();
                 scanner.nextLine();
                 Novel newnovel = new Novel(bookTitle, authorName, publisherName, publishedDate, itemid, pageNumber);
                 bookshelf.add(newnovel);
                 newnovel.displayCitation();
                 newnovel.displayInfo();
-            }
+            }/*
             else{ //wants to store a magazine (choice 2)
                 System.out.println("what is the title of the book?: ");
                 String bookTitle = scanner.nextLine();
@@ -52,11 +52,12 @@ public class Main {
                 newmagazine.displayCitation();
                 newmagazine.displayInfo();
             }
-        }
+        }*/
 
-        System.out.println("books in bookshelf: " );
-        for (LibraryItems book : bookshelf) {
-            System.out.print(book.title + ", ");
+            System.out.println("books in bookshelf: ");
+            for (LibraryItems book : bookshelf) {
+                System.out.print(book.title + ", ");
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 class Magazine extends LibraryItems implements Book {
-    private int issueNumber;
+    private String issueNumber;
 
-    public Magazine(String title, String author, String publisher, int publishDate, int itemId, int issueNumber) {
+    public Magazine(String title, String author, String publisher, String publishDate, String itemId, String issueNumber) {
         super(title, author, publisher, publishDate, itemId);
         this.issueNumber = issueNumber;
     }

@@ -2,11 +2,11 @@ class LibraryItems {
     protected String title;
     protected String author;
     protected String publisher;
-    protected int publishDate;
-    private int itemId;
+    protected String publishDate;
+    private String itemId;
     private boolean isAvailable;
 
-    public LibraryItems(String title, String author, String publisher, int publishDate, int itemId) {
+    public LibraryItems(String title, String author, String publisher, String publishDate, String itemId) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
